@@ -34,3 +34,4 @@ E:\dotnet proj\TaskManagerAPI\obj\Debug\net10.0\refint\TaskManagerAPI.dll
 E:\dotnet proj\TaskManagerAPI\obj\Debug\net10.0\TaskManagerAPI.pdb
 E:\dotnet proj\TaskManagerAPI\obj\Debug\net10.0\TaskManagerAPI.genruntimeconfig.cache
 E:\dotnet proj\TaskManagerAPI\obj\Debug\net10.0\ref\TaskManagerAPI.dll
+E:\dotnet proj\TaskManagerAPI\obj\Debug\net10.0\TaskManagerAPI.sourcelink.json
