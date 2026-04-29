@@ -23,4 +23,27 @@ public class TaskController : ControllerBase
 
     }
 
+    [HttpPut("/updatetask/{id}")]
+    public IActionResult UpdateTask(int id,TaskItem uptask)
+    {
+        var task=TaskItems.FirstOrDefault(t=>t.Id==id);
+        if(task==null) return NotFound();
+
+        task.Title=uptask.Title;
+        task.Description=uptask.Description;
+
+        return Ok(task);
+        
+    }
+
+    [HttpDelete("/deletetask/{id}")]
+    public IActionResult DeleteTask(int id)
+    {
+        var task=TaskItems.FirstOrDefault(t=>t.Id==id);
+        if(task==null) return NotFound();
+
+        TaskItems.Remove(task);
+        return Ok(TaskItems);
+    }
+
 }
