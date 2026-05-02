@@ -22,14 +22,14 @@ public class TaskController : ControllerBase
     [HttpPost("/createtask")]
     public ActionResult<TaskItem> CreateTask(TaskItem task)
     {
-        return(_taskService.postTask(task));
+        return(_taskService.CreateTask(task));
 
     }
 
     [HttpPut("/updatetask/{id}")]
     public IActionResult UpdateTask(int id,TaskItem uptask)
     {
-        var task=_taskService.updateTask(id,uptask);
+        var task=_taskService.UpdateTask(id,uptask);
         if(task==null) return NotFound();
         return Ok(task);
         
@@ -38,7 +38,7 @@ public class TaskController : ControllerBase
     [HttpDelete("/deletetask/{id}")]
     public IActionResult DeleteTask(int id)
     {
-        var sucess=_taskService.delTask(id);
+        var sucess=_taskService.DeleteTask(id);
         if(!sucess) return NotFound();
 
         var tasks=_taskService.GetTasks();
